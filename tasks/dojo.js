@@ -111,7 +111,7 @@ module.exports=function (config,cb) {
         basePath: null
     };
     if(config)
-    for(var key in defautOpts)
+    for(var key in options)
     {
         options[key]=config[key];
     }
