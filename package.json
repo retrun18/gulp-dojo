@@ -1,0 +1,23 @@
+{
+  "name": "gulp-dojo",
+  "version": "1.0.0",
+  "description": "Build Dojo inside a Gulp task",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retrun18/gulp-dojo.git"
+  },
+  "keywords": [
+    "dojo",
+    "gulp-dojo"
+  ],
+  "author": "AppleLi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/retrun18/gulp-dojo/issues"
+  },
+  "homepage": "https://github.com/retrun18/gulp-dojo#readme"
+}
