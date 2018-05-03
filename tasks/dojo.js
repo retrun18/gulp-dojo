@@ -130,7 +130,7 @@ module.exports=function (config,cb) {
     };
 
     if(options.dojo){
-        grunt.verbose.writeln("Dojo build parameters:");
+        // grunt.verbose.writeln("Dojo build parameters:");
         addParam(options.dojo);
         addParam('load=' + options.load);
 
@@ -220,8 +220,8 @@ module.exports=function (config,cb) {
             addParam("--xdDojoPath", options.xdDojoPath);
         }
     } else {
-        grunt.log.error('No dojo specified');
-        done(false);
+         gutil.log.error('No dojo specified');
+         cb();
     }
     var opts = {};
     if(options.cwd){
