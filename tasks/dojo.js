@@ -5,11 +5,11 @@
 
 var exec = require('child_process').exec,
     gutil = require('gulp-util');
-module.exports=function (cb) {
+module.exports=function (config,cb) {
     /**
      * @namespace defaults
      */
-    var options = this.options({
+    var options={
         /**
          * Path to dojo.js file in Dojo source
          * @type {String}
@@ -109,8 +109,12 @@ module.exports=function (cb) {
          * @default
          */
         basePath: null
-    });
-
+    };
+    if(config)
+    for(var key in defautOpts)
+    {
+        options[key]=config[key];
+    }
     gutil.log('Building Dojo...');
     var args = [];
     /*
@@ -226,7 +230,7 @@ module.exports=function (cb) {
     var cmd="node";
     args.forEach(function (param) {
         cmd+=" "+param;
-    })
+    });
     return exec(cmd,{cwd:opts.cwd},function (err, stdout, stderr) {
         if (err) return cb(err);
         if (!options.quiet) gutil.log(stdout, stderr);
