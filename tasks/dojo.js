@@ -120,15 +120,16 @@ module.exports=function (config,cb) {
     /*
      * Add parameter(s) to the argument list and log them, if in verbose mode.
      */
-    var addParam = function() {
-        // gutil.log("\t");
-        arguments.forEach(function (param) {
+    var addParam = function(key,param) {
+        if(key){
+            args.push(key)
+        }
+        if(param){
             args.push(param);
-            // gutil.log(param +" ");
-        });
+        }
+        // gutil.log("\t");
         // gutil.log("\n");
     };
-
     if(options.dojo){
         // grunt.verbose.writeln("Dojo build parameters:");
         addParam(options.dojo);
@@ -232,9 +233,16 @@ module.exports=function (config,cb) {
         cmd+=" "+param;
     });
     return exec(cmd,{cwd:opts.cwd},function (err, stdout, stderr) {
-        if (err) return cb(err);
-        if (!options.quiet) gutil.log(stdout, stderr);
-        cb();
+        if (err) {
+			var plugerror=new gutil.PluginError("gulp-dojo",err,{showStack : true });
+        gutil.log('Dojo Building completed,but error occurred...')
+		if(options.ignoreErrors){
+			return cb();
+		}
+		else cb(plugerror);
+		}
+        else if (!options.quiet) gutil.log(stdout, stderr);
         gutil.log('Dojo Successfully Built...')
+        cb();
     });
 };
