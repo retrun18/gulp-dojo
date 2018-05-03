@@ -18,8 +18,10 @@ Build Dojo inside a Gulp task
 <td>3.x</td>
 </tr>
 </table>
+
 ## Install
     npm install gulp-dojo --save
+    
 ### Usage
   options: {
     // You can also specify options to be used in all your tasks
