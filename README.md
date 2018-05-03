@@ -23,6 +23,8 @@ Build Dojo inside a Gulp task
     npm install gulp-dojo --save
     
 ### Usage
+
+```javascript
   options: {
     // You can also specify options to be used in all your tasks
     dojo: 'path/to/dojo.js', // Path to dojo.js file in dojo source
@@ -46,3 +48,4 @@ Build Dojo inside a Gulp task
   gulp.task('dojobuild',function(cb){
 	gudojo.dojo(options,cb);
 });
+```
