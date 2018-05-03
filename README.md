@@ -1,13 +1,13 @@
 # gulp-dojo
-Build Dojo inside a Gulp task
+
 [![NPM version](https://badge.fury.io/js/gulp-svn2.png)](http://badge.fury.io/js/gulp-svn2)
 <table>
 <tr>
-<td>Package</td><td>gulp-svn2</td>
+<td>Package</td><td>gulp-dojo</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>SVN plugin for Gulp</td>
+<td>Build Dojo inside a Gulp task</td>
 </tr>
 <tr>
 <td>Node Version</td>
