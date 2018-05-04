@@ -236,7 +236,7 @@ module.exports=function (config,cb) {
         if (err) {
 			var plugerror=new gutil.PluginError("gulp-dojo",err,{showStack : true });
         gutil.log('Dojo Building completed,but error occurred...')
-		if(options.ignoreErrors){
+		if(config.ignoreErrors){
 			return cb();
 		}
 		else cb(plugerror);
