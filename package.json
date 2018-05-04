@@ -1,6 +1,6 @@
 {
-  "name": "gulp-dojo1",
-  "version": "0.0.5",
+  "name": "gulp-dojo",
+  "version": "1.0.5",
   "description": "Build Dojo inside a Gulp task",
   "main": "index.js",
   "scripts": {
