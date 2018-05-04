@@ -13,7 +13,8 @@
   "keywords": [
     "dojo",
     "gulp-dojo",
-    "gulpplugin"
+    "gulpplugin",
+    "gulpfriendly"
   ],
   "author": "AppleLi",
   "license": "MIT",

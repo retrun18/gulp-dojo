@@ -43,7 +43,7 @@
     // Takes precedence over other basePaths
     // Default: null
     basePath: '',
-    ignoreErrors: true // Options (default: false): Grunt task returns successful even if there are errors in the dojo build
+    ignoreErrors: true // Options (default: false): gulp task returns successful even if there are errors in the dojo build
   }
   gulp.task('dojobuild',function(cb){
 	gudojo.dojo(options,cb);
